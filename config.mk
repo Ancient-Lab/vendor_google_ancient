@@ -14,21 +14,16 @@ PRODUCT_PACKAGES += \
     CloudPrint2 \
     Drive \
     FaceLock \
-    GoogleCalendarSyncAdapter \
     GoogleContactsSyncAdapter \
     GoogleExtShared \
-    GooglePrintRecommendationService \
     GoogleTTS \
-    GoogleVrCore \
     LatinIMEGooglePrebuilt \
     Maps \
     MarkupGoogle \
-    NexusLauncherIcons \
     Photos \
     PlayGames \
     PrebuiltBugle \
     PrebuiltDeskClockGoogle \
-    PrebuiltExchange3Google \
     PrebuiltGmail \
     SoundPickerPrebuilt \
     talkback \
@@ -103,6 +98,7 @@ PRODUCT_PACKAGES += \
     AndroidMigratePrebuilt \
     AndroidPlatformServices \
     ConfigUpdater \
+    ConnMetrics \
     GoogleBackupTransport \
     GoogleContacts \
     GoogleDialer \
@@ -110,7 +106,6 @@ PRODUCT_PACKAGES += \
     GoogleFeedback \
     GoogleOneTimeInitializer \
     GooglePartnerSetup \
-    GoogleRestore \
     GoogleServicesFramework \
     MatchmakerPrebuilt \
     Phonesky \
@@ -120,6 +115,7 @@ PRODUCT_PACKAGES += \
     StorageManagerGoogle \
     TagGoogle \
     TimeZoneDataPrebuilt \
+    Turbo \
     Velvet \
     WellbeingPrebuilt
 
