@@ -95,6 +95,7 @@
             <type name="application/vnd.openxmlformats-officedocument.presentationml.slideshow" />
             <type name="application/vnd.ms-powerpoint.slideshow.macroenabled.12" />
             <type name="application/x-mspowerpoint" />
+
       </filter>
     </item>
 </preferred-activities>

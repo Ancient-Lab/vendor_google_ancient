@@ -14,8 +14,6 @@
      limitations under the License.
 -->
 <resources>
-    <!-- Package name for the default in-call UI and dialer [DO NOT TRANSLATE] -->
-    <string name="ui_default_package" translatable="false">com.google.android.dialer</string>
-    <!-- Class name for the default main dialer activity [DO NOT TRANSLATE] -->
     <string name="dialer_default_class" translatable="false">com.google.android.dialer.extensions.GoogleDialtactsActivity</string>
+    <bool name="grant_location_permission_enabled">true</bool>
 </resources>

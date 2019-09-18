@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--     Copyright (C) 2017 The Pure Nexus Project
+<!--
+     Copyright (C) 2016 The Pure Nexus Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,10 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Wallpaper cropper package. Used as the default cropper if the active launcher doesn't
-         handle wallpaper cropping.
-    -->
-    <string name="config_wallpaperCropperPackage" translatable="false">com.google.android.apps.wallpaper</string>
 
     <!-- Flag indicating whether round icons should be parsed from the application manifest. -->
     <bool name="config_useRoundIcon">true</bool>
@@ -25,43 +22,146 @@
     <!-- Specifies the path that is used by AdaptiveIconDrawable class to crop launcher icons. -->
     <string name="config_icon_mask" translatable="false">"M50 0C77.6 0 100 22.4 100 50C100 77.6 77.6 100 50 100C22.4 100 0 77.6 0 50C0 22.4 22.4 0 50 0Z"</string>
 
-    <!-- Enable the RingtonePickerActivity in 'com.android.providers.media'. -->
-    <bool name="config_defaultRingtonePickerEnabled">false</bool>
-
     <!-- Misc -->
     <bool name="config_swipe_up_gesture_setting_available">true</bool>
     <bool name="config_smart_battery_available">true</bool>
     <string name="config_headlineFontFamily">google-sans</string>
-    <string name="config_headlineFontFamilyLight">google-sans</string>
-    <string name="config_headlineFontFeatureSettings">ss03</string>
     <string name="config_headlineFontFamilyMedium">google-sans-medium</string>
+    <string name="config_headlineFontFeatureSettings">ss03</string>
     <string name="config_recentsComponentName">com.google.android.apps.nexuslauncher/com.android.quickstep.RecentsActivity</string>
+    <string name="config_defaultAppPredictionService">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiPredictionService</string>
+    <string name="config_defaultContentSuggestionsService">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentSuggestionsService</string>
+    <string name="config_defaultSystemCaptionsManagerService">com.google.android.as/com.google.android.apps.miphone.aiai.captions.SystemCaptionsManagerService</string>
+    <string name="config_defaultSystemCaptionsService">com.google.android.as/com.google.android.apps.miphone.aiai.captions.CaptionsService</string>
+    <string name="config_defaultTextClassifierPackage">com.google.android.as</string>
+    <string name="config_secondaryHomeComponent">com.google.android.apps.nexuslauncher/com.android.launcher3.SecondaryDisplayLauncher</string>
+    <string name="config_defaultListenerAccessPackages">com.google.android.apps.nexuslauncher:com.google.android.setupwizard:com.google.android.apps.pixelmigrate:com.google.android.as:com.google.android.projection.gearhead</string>
     <bool name="config_buttonTextAllCaps">false</bool>
     <bool name="config_unplugTurnsOnScreen">true</bool>
     <bool name="config_sendPackageName">true</bool>
     <dimen name="config_dialogCornerRadius">8.0dip</dimen>
     <dimen name="config_buttonCornerRadius">4.0dip</dimen>
     <dimen name="config_progressBarCornerRadius">1000.0dip</dimen>
+    <dimen name="config_bottomDialogCornerRadius">16.0dip</dimen>
+    <item type="dimen" name="config_fullTaskSnapshotScale">0.8</item>
+    <integer name="config_maxShortcutTargetsPerApp">8</integer>
+    <integer name="config_storageManagerDaystoRetainDefault">60</integer>
 
-    <!-- Default web browser.  This is the package name of the application that will
-         be the default browser when the device first boots.  Afterwards the user
-         can select whatever browser app they wish to use as the default.
-         If this string is empty or the specified package does not exist, then
-         the behavior will be as though no app was named as an explicit default. -->
-    <string name="default_browser" translatable="false">com.android.chrome</string>
+    <string name="config_defaultListenerAccessPackages">com.google.android.apps.nexuslauncher:com.google.android.setupwizard:com.google.android.apps.pixelmigrate:com.google.android.as:com.google.android.projection.gearhead</string>
+    <string name="config_defaultWellbeingPackage">com.google.android.apps.wellbeing</string>
+    <string name="config_defaultDndAccessPackages">com.google.android.GoogleCamera:com.google.android.gms:com.google.intelligence.sense:com.google.android.settings.intelligence:com.google.android.apps.wellbeing:com.google.android.apps.safetyhub</string>
+    <string name="config_defaultSupervisionProfileOwnerComponent">com.google.android.gms/.kids.account.receiver.ProfileOwnerReceiver</string>
+    <string name="config_batterySaverScheduleProvider">com.google.android.apps.turbo</string>
+    <string name="config_defaultBrowser">com.android.chrome</string>
+    <string name="config_defaultSms">com.google.android.apps.messaging</string>
+    <string name="config_defaultDialer">com.google.android.dialer</string>
+    <string name="config_defaultGallery">com.google.android.apps.photos</string>
+    <string name="config_wallpaperCropperPackage">com.google.android.apps.wallpaper</string>
+    <string name="config_appsAuthorizedForSharedAccounts">;com.android.vending;com.android.settings;</string>
+    <string name="config_defaultAccessibilityService">com.google.android.marvin.talkback/.TalkBackService</string>
+    <string name="config_defaultAssistant">com.google.android.googlequicksearchbox</string>
+    <string name="config_defaultAutofillService">com.google.android.gms/.autofill.service.AutofillService</string>
+    <string name="config_defaultNetworkRecommendationProviderPackage">com.google.android.gms</string>
+    <string name="config_deviceConfiguratorPackageName">com.google.android.gms</string>
+    <string name="config_persistentDataPackageName">com.google.android.gms</string>
+    <string name="widget_default_class_name">com.android.alarmclock.DigitalAppWidgetProvider</string>
+    <string name="widget_default_package_name">com.google.android.deskclock</string>
 
-    <!-- Default SMS Application. This will be the default SMS application when
-         the phone first boots. The user can then change the default app to one
-         of their choosing.
-         This can be overridden for devices where a different default SMS
-         application is desired.
-         If this string is empty or the specified package does not exist, then
-         the platform will search for an SMS app and use that (if there is one)-->
-    <string name="default_sms_application" translatable="false">com.google.android.apps.messaging</string>
+    <bool name="config_defaultRingtonePickerEnabled">false</bool>
+    <bool name="config_allowDisablingAssistDisclosure">true</bool>
+    <bool name="config_enableAutoPowerModes">true</bool>
 
-    <!-- Screenshot editing default activity.  Must handle ACTION_EDIT image/png intents.
-         Blank sends the user to the Chooser first.
-         This name is in the ComponentName flattened format (package/class)  -->
-    <string name="config_screenshotEditor" translatable="false">com.google.android.markup/com.google.android.markup.AnnotateActivity</string>
+    <string-array name="config_batteryPackageTypeService">
+        <item>com.google.android.gms</item>
+        <item>com.google.android.apps.gcs</item>
+    </string-array>
+    <string-array name="config_nonBlockableNotificationPackages">
+        <item>com.google.android.deskclock:Firing</item>
+        <item>com.google.android.setupwizard</item>
+        <item>com.google.android.apps.pixelmigrate</item>
+    </string-array>
+    <string-array name="config_priorityOnlyDndExemptPackages">
+        <item>com.google.android.dialer</item>
+    </string-array>
+    <string-array name="config_defaultFirstUserRestrictions">
+        <item>no_oem_unlock</item>
+    </string-array>
+    <string-array name="config_locationExtraPackageNames">
+        <item>com.google.android.gms.location.history</item>
+    </string-array>
+    <string-array name="config_locationProviderPackageNames">
+        <item>com.google.android.gms</item>
+        <item>com.android.location.fused</item>
+    </string-array>
+    <string-array name="config_nightDisplayColorTemperatureCoefficients">
+        <item>0.0</item>
+        <item>0.0</item>
+        <item>1.0</item>
+        <item>-0.000000014365268757</item>
+        <item>0.000255092801250106</item>
+        <item>-0.064156942434907716</item>
+        <item>-0.000000000910931179</item>
+        <item>0.000207598323269139</item>
+        <item>-0.349361641294833436</item>
+    </string-array>
+    <string-array name="vendor_required_apps_managed_profile">
+        <item>com.android.vending</item>
+        <item>com.google.android.gms</item>
+        <item>com.google.android.contacts</item>
+        <item>com.google.android.apps.wellbeing</item>
+        <item>com.android.documentsui</item>
+        <item>com.google.android.apps.internal.betterbug</item>
+        <item>com.google.android.apps.internal.nexusuploader</item>
+        <item>com.google.android.netgrapher</item>
+        <item>com.android.ramdump</item>
+        <item>com.google.android.volta</item>
+        <item>com.google.android.as</item>
+    </string-array>
+    <string-array name="config_allowedSecureInstantAppSettings">
+        <item>advertising_id</item>
+        <item>limit_ad_tracking</item>
+    </string-array>
+    <string-array name="config_disabledUntilUsedPreinstalledImes">
+        <item>com.google.android.inputmethod.latin</item>
+        <item>com.google.android.apps.inputmethod.hindi</item>
+        <item>com.google.android.inputmethod.japanese</item>
+        <item>com.google.android.inputmethod.korean</item>
+        <item>com.google.android.inputmethod.pinyin</item>
+        <item>jp.co.omronsoft.iwnnime.ml</item>
+        <item>com.nuance.xt9.input</item>
+    </string-array>
+    <string-array name="config_ephemeralResolverPackage">
+        <item>com.google.android.gms</item>
+    </string-array>
+    <string-array name="vendor_required_apps_managed_device">
+        <item>com.android.vending</item>
+        <item>com.google.android.gms</item>
+        <item>com.google.android.contacts</item>
+        <item>com.google.android.apps.safetyhub</item>
+        <item>com.google.android.apps.wellbeing</item>
+        <item>com.google.android.googlequicksearchbox</item>
+        <item>com.google.android.launcher</item>
+        <item>com.google.android.apps.nexuslauncher</item>
+        <item>com.android.launcher</item>
+        <item>com.google.android.dialer</item>
+        <item>com.google.android.apps.messaging</item>
+        <item>com.google.android.setupwizard</item>
+        <item>com.google.android.settings.intelligence</item>
+        <item>com.android.settings.intelligence</item>
+        <item>com.android.documentsui</item>
+    </string-array>
+    <string-array name="vendor_required_apps_managed_user">
+        <item>com.android.vending</item>
+        <item>com.google.android.gms</item>
+        <item>com.google.android.contacts</item>
+        <item>com.google.android.apps.safetyhub</item>
+        <item>com.google.android.apps.wellbeing</item>
+        <item>com.google.android.googlequicksearchbox</item>
+        <item>com.google.android.launcher</item>
+        <item>com.android.launcher</item>
+        <item>com.google.android.dialer</item>
+        <item>com.google.android.apps.messaging</item>
+        <item>com.android.documentsui</item>
+    </string-array>
 
 </resources>
