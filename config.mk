@@ -13,13 +13,12 @@ PRODUCT_PACKAGES += \
     CalculatorGooglePrebuilt \
     CalendarGooglePrebuilt \
     Chrome \
-    CloudPrint2 \
     Drive \
-    FaceLock \
+    EmergencyInfoGoogleNoUi \
     GoogleContactsSyncAdapter \
-    GoogleExtShared \
     GoogleTTS \
     LatinIMEGooglePrebuilt \
+    LocationHistoryPrebuilt \
     Maps \
     MarkupGoogle \
     Photos \
@@ -29,25 +28,26 @@ PRODUCT_PACKAGES += \
     PrebuiltGmail \
     SoundPickerPrebuilt \
     talkback \
+    TrichromeLibrary \
     WallpaperPickerGooglePrebuilt \
     WallpapersUsTwo \
-    WebViewStub
+    WebViewGoogle
 
 # Bootanimation
 ifeq ($(TARGET_BOOT_ANIMATION_RES),1080)
-     PRODUCT_COPY_FILES += $(LOCAL_PATH)/bootanimation/bootanimation_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
-     PRODUCT_COPY_FILES += $(LOCAL_PATH)/bootanimation/bootanimation-dark_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
+     PRODUCT_COPY_FILES += $(LOCAL_PATH)/media/bootanimation_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
+     PRODUCT_COPY_FILES += $(LOCAL_PATH)/media/bootanimation-dark_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
 else ifeq ($(TARGET_BOOT_ANIMATION_RES),1440)
-     PRODUCT_COPY_FILES += $(LOCAL_PATH)/bootanimation/bootanimation_1440.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
-     PRODUCT_COPY_FILES += $(LOCAL_PATH)/bootanimation/bootanimation-dark_1440.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
+     PRODUCT_COPY_FILES += $(LOCAL_PATH)/media/bootanimation_1440.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
+     PRODUCT_COPY_FILES += $(LOCAL_PATH)/media/bootanimation-dark_1440.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
 else
     ifeq ($(TARGET_BOOT_ANIMATION_RES),)
         $(warning "TARGET_BOOT_ANIMATION_RES is undefined, assuming 1080p")
     else
         $(warning "Current bootanimation res is not supported, forcing 1080p")
     endif
-    PRODUCT_COPY_FILES += $(LOCAL_PATH)/bootanimation/bootanimation_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
-    PRODUCT_COPY_FILES += $(LOCAL_PATH)/bootanimation/bootanimation-dark_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
+    PRODUCT_COPY_FILES += $(LOCAL_PATH)/media/bootanimation_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
+    PRODUCT_COPY_FILES += $(LOCAL_PATH)/media/bootanimation-dark_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
 endif
 
 # files
@@ -72,28 +72,25 @@ PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/usr,$(TARGET
 
 # priv-app
 PRODUCT_PACKAGES += \
-    AmbientPlayProvider \
     AndroidMigratePrebuilt \
     AndroidPlatformServices \
     ConfigUpdater \
     ConnMetrics \
-    GoogleBackupTransport \
     GoogleContacts \
     GoogleDialer \
-    GoogleExtServices \
     GoogleFeedback \
-    GoogleOneTimeInitializer \
     GooglePartnerSetup \
     GoogleServicesFramework \
     MatchmakerPrebuilt \
     Phonesky \
     PixelLauncher \
-    PrebuiltGmsCorePi \
-    SetupWizard \
-    StorageManagerGoogle \
-    TagGoogle \
-    TimeZoneDataPrebuilt \
-    Turbo \
+    PixelSetupWizard \
+    PrebuiltGmsCoreQt \
+    SafetyHubPrebuilt \
+    SettingsIntelligenceGooglePrebuilt \
+    SetupWizardPrebuilt \
+    TipsPrebuilt \
+    TurboPrebuilt \
     Velvet \
     WellbeingPrebuilt
 
