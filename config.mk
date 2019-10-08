@@ -22,7 +22,6 @@ PRODUCT_PACKAGES += \
     Maps \
     MarkupGoogle \
     Photos \
-    PlayGames \
     PrebuiltBugle \
     PrebuiltDeskClockGoogle \
     PrebuiltGmail \
