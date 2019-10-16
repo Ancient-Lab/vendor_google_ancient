@@ -22,6 +22,7 @@ PRODUCT_PACKAGES += \
     Maps \
     MarkupGoogle \
     Photos \
+    PixelThemes \
     PrebuiltBugle \
     PrebuiltDeskClockGoogle \
     PrebuiltGmail \
