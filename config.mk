@@ -95,6 +95,17 @@ PRODUCT_PACKAGES += \
     WellbeingPrebuilt
 
 # props
-PRODUCT_PROPERTY_OVERRIDES += \
+# SetupWizard
+PRODUCT_PRODUCT_PROPERTIES += \
+    setupwizard.enable_assist_gesture_training=true \
+    setupwizard.feature.baseline_setupwizard_enabled=true \
+    setupwizard.feature.show_pixel_tos=true \
+    setupwizard.feature.show_support_link_in_deferred_setup=false \
+    setupwizard.theme=glif_v3_light
+
+# IME
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.com.google.ime.bs_theme=true \
+    ro.com.google.ime.system_lm_dir=/system/product/usr/share/ime/google/d3_lms \
     ro.wallpapers_loc_request_suw=true \
     ro.com.google.ime.theme_id=5
