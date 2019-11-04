@@ -70,6 +70,11 @@ PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/lib,$(TARGET
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/lib64,$(TARGET_COPY_OUT_PRODUCT)/lib64)
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/usr,$(TARGET_COPY_OUT_PRODUCT)/usr)
 
+# overlays
+PRODUCT_PACKAGES += \
+    PixelDocumentsUIGoogleOverlay \
+    GooglePermissionControllerOverlay
+
 # priv-app
 PRODUCT_PACKAGES += \
     AndroidMigratePrebuilt \
