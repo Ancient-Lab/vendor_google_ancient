@@ -1,4 +1,5 @@
-LOCAL_PATH := vendor/google/ion
+LOCAL_PATH := vendor/google/ancient
+LOCAL_PATH_PRODUCT := vendor/google/ancient/product
 
 ifeq ($(TARGET_GAPPS_ARCH),)
 $(error "GAPPS: TARGET_GAPPS_ARCH is undefined")
@@ -21,6 +22,7 @@ PRODUCT_PACKAGES += \
     LocationHistoryPrebuilt \
     Maps \
     MarkupGoogle \
+    NgaResources \
     Photos \
     PixelThemes \
     PrebuiltBugle \
@@ -28,32 +30,31 @@ PRODUCT_PACKAGES += \
     PrebuiltGmail \
     SoundPickerPrebuilt \
     talkback \
-    TrichromeLibrary \
-    WallpaperPickerGooglePrebuilt \
     WallpapersUsTwo \
     WebViewGoogle
 
 # Bootanimation
 ifeq ($(TARGET_BOOT_ANIMATION_RES),1080)
-     PRODUCT_COPY_FILES += $(LOCAL_PATH)/media/bootanimation_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
-     PRODUCT_COPY_FILES += $(LOCAL_PATH)/media/bootanimation-dark_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
+     PRODUCT_COPY_FILES += $(LOCAL_PATH_PRODUCT)/media/bootanimation_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
+     PRODUCT_COPY_FILES += $(LOCAL_PATH_PRODUCT)/media/bootanimation-dark_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
 else ifeq ($(TARGET_BOOT_ANIMATION_RES),1440)
-     PRODUCT_COPY_FILES += $(LOCAL_PATH)/media/bootanimation_1440.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
-     PRODUCT_COPY_FILES += $(LOCAL_PATH)/media/bootanimation-dark_1440.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
+     PRODUCT_COPY_FILES += $(LOCAL_PATH_PRODUCT)/media/bootanimation_1440.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
+     PRODUCT_COPY_FILES += $(LOCAL_PATH_PRODUCT)/media/bootanimation-dark_1440.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
 else
     ifeq ($(TARGET_BOOT_ANIMATION_RES),)
         $(warning "TARGET_BOOT_ANIMATION_RES is undefined, assuming 1080p")
     else
         $(warning "Current bootanimation res is not supported, forcing 1080p")
     endif
-    PRODUCT_COPY_FILES += $(LOCAL_PATH)/media/bootanimation_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
-    PRODUCT_COPY_FILES += $(LOCAL_PATH)/media/bootanimation-dark_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
+    PRODUCT_COPY_FILES += $(LOCAL_PATH_PRODUCT)/media/bootanimation_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
+    PRODUCT_COPY_FILES += $(LOCAL_PATH_PRODUCT)/media/bootanimation-dark_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
 endif
 
 # files
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/etc,$(TARGET_COPY_OUT_PRODUCT)/etc)
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/fonts,$(TARGET_COPY_OUT_PRODUCT)/fonts)
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/media/audio,$(TARGET_COPY_OUT_PRODUCT)/media/audio)
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/etc,$(TARGET_COPY_OUT_SYSTEM)/etc)
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH_PRODUCT)/etc,$(TARGET_COPY_OUT_PRODUCT)/etc)
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH_PRODUCT)/fonts,$(TARGET_COPY_OUT_PRODUCT)/fonts)
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH_PRODUCT)/media/audio,$(TARGET_COPY_OUT_PRODUCT)/media/audio)
 
 # framework
 PRODUCT_PACKAGES += \
@@ -66,9 +67,9 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay/common/
 
 # libs
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/lib,$(TARGET_COPY_OUT_PRODUCT)/lib)
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/lib64,$(TARGET_COPY_OUT_PRODUCT)/lib64)
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/usr,$(TARGET_COPY_OUT_PRODUCT)/usr)
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH_PRODUCT)/lib,$(TARGET_COPY_OUT_PRODUCT)/lib)
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH_PRODUCT)/lib64,$(TARGET_COPY_OUT_PRODUCT)/lib64)
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH_PRODUCT)/usr,$(TARGET_COPY_OUT_PRODUCT)/usr)
 
 # overlays
 PRODUCT_PACKAGES += \
@@ -83,20 +84,25 @@ PRODUCT_PACKAGES += \
     ConnMetrics \
     GoogleContacts \
     GoogleDialer \
+    GoogleDocumentsUIPrebuilt \
     GoogleFeedback \
+    GooglePackageInstaller \
     GooglePartnerSetup \
+    GooglePermissionControllerPrebuilt \
     GoogleServicesFramework \
     MatchmakerPrebuilt \
     Phonesky \
     PixelLauncher \
     PixelSetupWizard \
     PrebuiltGmsCoreQt \
+    RecorderPrebuilt \
     SafetyHubPrebuilt \
     SettingsIntelligenceGooglePrebuilt \
     SetupWizardPrebuilt \
     TipsPrebuilt \
     TurboPrebuilt \
     Velvet \
+    WallpaperPickerGoogleRelease \
     WellbeingPrebuilt
 
 # props
